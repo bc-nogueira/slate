@@ -1,0 +1,20 @@
+<h1 id='authentication'>Authentication</h1>
+<blockquote>
+<p>To authorize, use this code:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="nt">--request</span> GET <span class="se">\</span>
+  <span class="nt">--url</span> https://app.kickserv.com/:subdomain/api/v4/account.json <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Authorization: Authorization: Bearer token'</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>token</code> with your JWT.</p>
+</blockquote>
+
+<p>To make requests to our API v4 please use the Bearer Token authentication using JWT as the authentication token.</p>
+
+<p><code>Authorization: meowmeowmeow</code></p>
+
+<aside class="notice">
+You must replace <code>token</code> with your JWT.
+</aside>

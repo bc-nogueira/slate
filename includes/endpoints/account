@@ -1,0 +1,51 @@
+<h1 id='accounts'>Accounts</h1><h2 id='the-account-object'>The account object</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae turpis enim. Vestibulum volutpat mauris a est convallis dictum. Aenean nisl diam, varius sit amet felis sed, pharetra eleifend mi. Sed a facilisis nisi, ac condimentum tellus. Quisque vehicula consequat lacus quis congue. Praesent ut aliquam diam. Aenean accumsan nisi ut mattis viverra. Proin vitae nisi non ligula egestas pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel est et sapien porttitor tristique. Sed tincidunt id nibh at dictum. Suspendisse potenti. Nam accumsan enim in dui congue accumsan. Nullam quis nisl eu lectus euismod finibus sed eu nunc.</p>
+<h3 id='attributes'>Attributes</h3>
+<ul>
+<li><strong>id</strong></li>
+</ul>
+
+<p>Unique identifier for the_ object.</p>
+
+<ul>
+<li><strong>company name</strong></li>
+</ul>
+
+<p>Lorem ipsum dolor sit amet</p>
+
+<ul>
+<li><strong>subscription plan handle</strong></li>
+</ul>
+
+<p>Lorem ipsum dolor sit amet</p>
+
+<ul>
+<li><strong>chargify subscription state</strong></li>
+</ul>
+
+<p>Lorem ipsum dolor sit amet</p>
+<h2 id='get-account'>Get Account</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://app.kickserv.com/subdomain/api/v4/account.json <span class="se">\</span>
+<span class="nt">-H</span> <span class="s2">"Accept: application/json"</span> <span class="se">\</span>
+<span class="nt">-H</span> <span class="s2">"Authorization: Bearer token"</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kickserv"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"subscription_plan_handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"premium"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"chargify_subscription_state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"backoffice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"internal"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all kittens.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://app.kickserv.com/subdomain/api/v4/account.json</code></p>

@@ -1,0 +1,71 @@
+<h1 id='errors'>Errors</h1>
+<p>Kickserv uses conventional HTTP response codes to indicate the success or failure of an API request:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Ok -- Everything worked as expected</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+</tbody></table>
+<h2 id='error-response'>Error response</h2>
+<p>Error objects provide additional information about problems encountered while performing an operation.</p>
+
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Status</td>
+<td>The HTTP status code applicable to this problem</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>Description</td>
+</tr>
+<tr>
+<td>Detail</td>
+<td>Description</td>
+</tr>
+<tr>
+<td>Links</td>
+<td>A <code>links</code> object that MAY contain the following members</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>After an errror, the server returns a JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">404</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Error title"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"detail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Error detailed message"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
