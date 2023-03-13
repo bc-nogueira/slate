@@ -1,0 +1,57 @@
+# Accounts
+
+## The account object
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae turpis enim. Vestibulum volutpat mauris a est convallis dictum. Aenean nisl diam, varius sit amet felis sed, pharetra eleifend mi. Sed a facilisis nisi, ac condimentum tellus. Quisque vehicula consequat lacus quis congue. Praesent ut aliquam diam. Aenean accumsan nisi ut mattis viverra. Proin vitae nisi non ligula egestas pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel est et sapien porttitor tristique. Sed tincidunt id nibh at dictum. Suspendisse potenti. Nam accumsan enim in dui congue accumsan. Nullam quis nisl eu lectus euismod finibus sed eu nunc.
+
+### Attributes
+
+* **id**
+
+Unique identifier for the_ object.
+
+* **company name**
+
+Lorem ipsum dolor sit amet
+
+* **subscription plan handle**
+
+Lorem ipsum dolor sit amet
+
+
+* **chargify subscription state**
+
+Lorem ipsum dolor sit amet
+
+## Get Account
+
+```shell
+curl https://app.kickserv.com/subdomain/api/v4/account.json \
+-H "Accept: application/json" \
+-H "Authorization: Bearer token"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "data": {
+        "id": "1",
+        "type": "account",
+        "attributes": {
+            "company_name": "Kickserv",
+            "subscription_plan_handle": "premium",
+            "chargify_subscription_state": "active",
+            "backoffice": "none",
+            "internal": true,
+            "features": []
+        }
+    }
+}
+```
+
+This endpoint retrieves all kittens.
+
+### HTTP Request
+
+`GET https://app.kickserv.com/subdomain/api/v4/account.json`

@@ -1,0 +1,20 @@
+# Authentication
+
+> To authorize, use this code:
+
+```shell
+# With shell, you can just pass the correct header with each request
+curl --request GET \
+  --url https://app.kickserv.com/:subdomain/api/v4/account.json \
+  --header 'Authorization: Authorization: Bearer token'
+```
+
+> Make sure to replace `token` with your JWT.
+
+To make requests to our API v4 please use the Bearer Token authentication using JWT as the authentication token.
+
+`Authorization: meowmeowmeow`
+
+<aside class="notice">
+You must replace <code>token</code> with your JWT.
+</aside>
